@@ -17,4 +17,4 @@ class Article(models.Model):
     naped = models.CharField(max_length=20, choices=NAPEDY, blank=False, unique=False)
 
     def __str__(self):
-        return self.marka + self.model + self.silnik + self.skrzynia_biegów + self.drzwi + self.rok + self.naped
+        return f"{self.marka} {self.model} {self.silnik} {self.skrzynia_biegów} {self.drzwi} {self.rok} {self.naped}"

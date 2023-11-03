@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista artykułów</title>
+</head>
+<body>
+    <h1>Lista artykułów</h1>
+    <ul>
+        {% for article in articles %}
+            <li>
+                Marka: {{ article.marka }}<br>
+                Model: {{ article.model }}<br>
+                Silnik: {{ article.silnik }}<br>
+                Skrzynia biegów: {{ article.skrzynia_biegów }}<br>
+                Drzwi: {{ article.drzwi }}<br>
+                Rok: {{ article.rok }}<br>
+                Napęd: {{ article.get_naped_display }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
