@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lista artykułów</title>
+    <title>Salon samochodowy</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <h1>Lista artykułów</h1>
-    <ul>
+    <h1>Salon samochodowy</h1>
+    <table>
+        <tr>
+            <th>Marka</th>
+            <th>Model</th>
+            <th>Silnik</th>
+            <th>Skrzynia biegów</th>
+            <th>Drzwi</th>
+            <th>Rok</th>
+            <th>Napęd</th>
+        </tr>
         {% for article in articles %}
-            <li>
-                Marka: {{ article.marka }}<br>
-                Model: {{ article.model }}<br>
-                Silnik: {{ article.silnik }}<br>
-                Skrzynia biegów: {{ article.skrzynia_biegów }}<br>
-                Drzwi: {{ article.drzwi }}<br>
-                Rok: {{ article.rok }}<br>
-                Napęd: {{ article.get_naped_display }}<br>
-            </li>
+            <tr>
+                <td>{{ article.marka }}</td>
+                <td>{{ article.model }}</td>
+                <td>{{ article.silnik }}</td>
+                <td>{{ article.skrzynia_biegów }}</td>
+                <td>{{ article.drzwi }}</td>
+                <td>{{ article.rok }}</td>
+                <td>{{ article.get_naped_display }}</td>
+            </tr>
         {% endfor %}
-    </ul>
+    </table>
 </body>
 </html>
